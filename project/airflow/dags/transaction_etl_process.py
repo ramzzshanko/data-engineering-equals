@@ -4,6 +4,8 @@ from datetime import datetime, timedelta
 import pandas as pd
 import pyodbc
 import pymongo
+import psycopg2
+from psycopg2 import sql
 
 default_args = {
     'owner': 'airflow',
@@ -23,10 +25,46 @@ dag = DAG(
 )
 
 def extract_mongo_transactions():
-    pass
+    # MongoDB connection details
+    mongo_host = 'localhost'
+    mongo_port = 27017
+    mongo_db = 'financial_data'
+    mongo_collection = 'transactions'
+
+    # Connect to MongoDB
+    client = pymongo.MongoClient(host=mongo_host, port=mongo_port)
+    db = client[mongo_db]
+    collection = db[mongo_collection]
+
+    # Extract data from MongoDB
+    data = list(collection.find())
+
+    return data
 
 def extract_postgres_transactions():
-    pass
+    # PostgreSQL connection details
+    conn = psycopg2.connect(
+        dbname="financial_data",
+        user="postgres",
+        password="postgres23!",
+        host="localhost"
+    )
+    
+    query = sql.SQL("""
+        SELECT t.transaction_id, t.transaction_date, c.customer_id, 
+               c.first_name, c.last_name, p.product_id, p.product_name, 
+               l.location_id, l.location_name, l.country,
+               t.quantity, t.total_amount
+        FROM transactions t
+        JOIN customers c ON t.customer_id = c.customer_id
+        JOIN products p ON t.product_id = p.product_id
+        JOIN locations l ON t.location_id = l.location_id
+    """)
+    
+    df = pd.read_sql_query(query, conn)
+    
+    conn.close()
+    return df
 
 def transform_data():
     pass
