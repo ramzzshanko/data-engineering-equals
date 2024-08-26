@@ -1,7 +1,2 @@
 project/airflow/dags/__pycache__/transaction_etl_process.cpython-38.pyc
-project/airflow/logs/dag_processor_manager/dag_processor_manager.log
-project/airflow/logs/scheduler/latest
-project/airflow/logs/scheduler/2024-08-26/transaction_etl_process.py.log
-project/airflow/dags/.transaction_etl_process.py.swp
-project/airflow/logs/dag_id=transaction_etl_process/run_id=scheduled__2024-08-25T00:00:00+00:00/task_id=extract_from_mongo/attempt=1.log
-project/airflow/logs/dag_id=transaction_etl_process/run_id=scheduled__2024-08-25T00:00:00+00:00/task_id=extract_from_postgres/attempt=1.log
+project/airflow/logs/*
