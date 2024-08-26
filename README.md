@@ -52,6 +52,12 @@ This project involves setting up a comprehensive data infrastructure for a finan
 
 Access the Airflow UI (http://localhost:8080) and trigger the transaction_etl_process DAG.
 
+![image](https://github.com/user-attachments/assets/9dbabb67-aea2-4a7a-b641-935961f53d0c)
+
+
+![image](https://github.com/user-attachments/assets/55b2d602-9aeb-4806-a65f-37609bee07ee)
+
+
 ### Real-Time Data Processing
 
 Simulate Real-Time Data:
