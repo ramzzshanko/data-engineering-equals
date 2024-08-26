@@ -1,0 +1,12 @@
+datasources:
+  mssql_db:
+    class_name: SqlAlchemyDatasource
+    credentials:
+      host: sql-server
+      port: 1433
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
+      database: ${DB_NAME}
+    data_asset_type:
+      class_name: SqlAlchemyDataset
+      module_name: great_expectations.dataset
