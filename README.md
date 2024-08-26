@@ -43,7 +43,7 @@ This project involves setting up a comprehensive data infrastructure for a finan
 ## Setup Instructions
 
 1. Clone the Repository: `git clone https://github.com/ramzzshanko/data-engineering-equals.git`
-2. `cd data-engineering-equals` && `docker compose up --build`
+2. `cd data-engineering-equals/project` && `docker compose up --build`
 3. Access Apache Airflow webserver at `http://localhost:8080`, username is `airflow` and password is `airflow`.
 
 ## Running the Project
