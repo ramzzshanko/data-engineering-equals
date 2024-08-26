@@ -13,27 +13,20 @@ This project involves setting up a comprehensive data infrastructure for a finan
 
 ## Project Structure
 
+```
 ├── project/                           # Project Parent folder
 │   ├── airflow/    # Apache Airflow parent folder
-│   └──── dags/       # Airflow DAGs for ETL and real-time processing
-
-│   └────── transaction_etl_process.py      # DAG for the ETL pipeline
-
-│   └────── realtime_analytics_dag.py       # DAG for real-time processing
+│   └──── dags/       # Airflow DAGs for ETL and real-time processing│   └────── transaction_etl_process.py      # DAG for the ETL pipeline│   └────── realtime_analytics_dag.py       # DAG for real-time processing
 |    ├── flink/                            # Apache Flink Docker file and real time processing file
 │   ├──── Dockerfile           # Dockerfile
 │   ├──── realtime_processing.py          # Realtime processing script
 |    ├── influxdb/                            # Influx database dockerfile
-│   ├──── Dockerfile           # Dockerfilefor 
+│   ├──── Dockerfile           # Dockerfilefor
 |    ├── kafka/                            # Apache kafka Dockerfile and config
-│   ├──── Dockerfile           # Dockerfile
-
-│   ├──── kafka_server_jaas.conf         # config file
-
-|    |---- sql-server # Data Warehouse ddl scripts
+│   ├──── Dockerfile           # Dockerfile│   ├──── kafka_server_jaas.conf         # config file|    |---- sql-server # Data Warehouse ddl scripts
 │   └── data_governance_policy.md          # Data governance policies and implementation
 ├── README.md                       # Project README file
-
+```
 
 ## Getting Started
 
@@ -59,13 +52,11 @@ This project involves setting up a comprehensive data infrastructure for a finan
 
 Access the Airflow UI (http://localhost:8080) and trigger the transaction_etl_process DAG.
 
-
 ### Real-Time Data Processing
 
 Simulate Real-Time Data:
 Use Apache Kafka to simulate real-time financial transactions or market data.
 Run the realtime_analytics_dag.py DAG in Airflow to start ingesting and processing this data.
-
 
 ## Data Warehouse Schema
 

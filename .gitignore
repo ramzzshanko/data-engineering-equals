@@ -1,2 +1,4 @@
 project/airflow/dags/__pycache__/transaction_etl_process.cpython-38.pyc
 project/airflow/logs/*
+project/airflow/dags/.transaction_etl_process.py.swp
+project/airflow/dags/__pycache__/realtime_analytics_dag.cpython-38.pyc
