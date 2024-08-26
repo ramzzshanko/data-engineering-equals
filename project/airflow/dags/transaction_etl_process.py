@@ -46,8 +46,8 @@ def extract_postgres_transactions():
     conn = psycopg2.connect(
         dbname="financial_data",
         user="postgres",
-        password="postgres23!",
-        host="localhost"
+        password="postgres",
+        host="172.31.176.1"
     )
     
     query = sql.SQL("""
